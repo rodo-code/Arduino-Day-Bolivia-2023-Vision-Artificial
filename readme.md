@@ -42,11 +42,11 @@ pip install -r requirements.txt
       print(data)
    ```
 3. Configuracion para la comunicación Serial con Arduino
-    ```python
-    COM = 'com5'
-    BAUD = 9600
-    ser = serial.Serial(COM, BAUD)
-    ```
+      ```python
+      COM = 'com5'
+      BAUD = 115200
+      ser = serial.Serial(port=COM, baudrate=BAUD,timeout=.1)
+      ```
 4. Configuramos la fuente de video con el método `VideoCapture()` cuyo parámetro usualmente es 0, 1 o 2 dependiendo de la cantidad de dispositivos de captura de video que tenga tu computadora.
    ```python
    cap = cv2.VideoCapture(0)
